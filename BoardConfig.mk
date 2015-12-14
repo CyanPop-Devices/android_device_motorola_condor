@@ -52,6 +52,13 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_CONFIG := cm_condor_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8610
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Rom Toolchain
+TARGET_GCC_VERSION_EXP := 4.9
+
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x37 utags.blkdev=/dev/block/bootdevice/by-name/utags vmalloc=400M androidboot.selinux=permissive
 
 WLAN_MODULES:
