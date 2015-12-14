@@ -181,3 +181,6 @@ qemu.hw.mainkeys=0
 
 # Wifi
 ro.disableWifiApFirmwareReload=true
+
+# OTA
+ro.product.device=condor
